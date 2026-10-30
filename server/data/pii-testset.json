@@ -1,0 +1,109 @@
+[
+  {
+    "text": "My Google Cloud API key is {{GOOGLE_KEY}} for testing.",
+    "expected": [{ "type": "API_KEY", "value": "{{GOOGLE_KEY}}" }]
+  },
+  {
+    "text": "Please use my OpenAI key {{OPENAI_KEY}} in your client.",
+    "expected": [{ "type": "API_KEY", "value": "{{OPENAI_KEY}}" }]
+  },
+  {
+    "text": "GitHub personal access token: {{GITHUB_TOKEN}}",
+    "expected": [{ "type": "API_KEY", "value": "{{GITHUB_TOKEN}}" }]
+  },
+  {
+    "text": "The AWS key is {{AWS_KEY}} in production.",
+    "expected": [{ "type": "API_KEY", "value": "{{AWS_KEY}}" }]
+  },
+  {
+    "text": "My bot token is {{SLACK_TOKEN}} on Slack.",
+    "expected": [{ "type": "API_KEY", "value": "{{SLACK_TOKEN}}" }]
+  },
+  {
+    "text": "Here is the auth bearer: Bearer {{JWT}}",
+    "expected": [{ "type": "API_KEY", "value": "{{JWT}}" }]
+  },
+  {
+    "text": "Contact me at alice.smith@example.org for details.",
+    "expected": [{ "type": "EMAIL", "value": "alice.smith@example.org" }]
+  },
+  {
+    "text": "Send the invoice to support@company.co.in please.",
+    "expected": [{ "type": "EMAIL", "value": "support@company.co.in" }]
+  },
+  {
+    "text": "My Visa card is 4532-0150-1234-5671 for payment.",
+    "expected": [{ "type": "CARD", "value": "4532-0150-1234-5671" }]
+  },
+  {
+    "text": "Pay using Mastercard 5555555555554444 immediately.",
+    "expected": [{ "type": "CARD", "value": "5555555555554444" }]
+  },
+  {
+    "text": "The order number is 1234567890123456 (invalid Luhn card test).",
+    "expected": [],
+    "mustNotMatch": ["CARD"]
+  },
+  {
+    "text": "My Aadhaar identification is 2345 6789 0123.",
+    "expected": [{ "type": "AADHAAR", "value": "2345 6789 0123" }]
+  },
+  {
+    "text": "Verify with Aadhaar number 9876-5432-1098.",
+    "expected": [{ "type": "AADHAAR", "value": "9876-5432-1098" }]
+  },
+  {
+    "text": "Income tax PAN number is ABCDE1234F for filing.",
+    "expected": [{ "type": "PAN", "value": "ABCDE1234F" }]
+  },
+  {
+    "text": "Corporate PAN: BNZPK5432A.",
+    "expected": [{ "type": "PAN", "value": "BNZPK5432A" }]
+  },
+  {
+    "text": "Call me on mobile +91 98765 43210 tomorrow.",
+    "expected": [{ "type": "PHONE", "value": "+91 98765 43210" }]
+  },
+  {
+    "text": "Direct phone line: +1 415 555 2671.",
+    "expected": [{ "type": "PHONE", "value": "+1 415 555 2671" }]
+  },
+  {
+    "text": "In the year 2024, our revenue was $5000 from order 987654.",
+    "expected": [],
+    "mustNotMatch": ["PHONE", "CARD"]
+  },
+  {
+    "text": "Pay me via UPI at rahul.sharma@okhdfcbank.",
+    "expected": [{ "type": "UPI", "value": "rahul.sharma@okhdfcbank" }]
+  },
+  {
+    "text": "My Google Pay ID is priya123@oksbi.",
+    "expected": [{ "type": "UPI", "value": "priya123@oksbi" }]
+  },
+  {
+    "text": "My date of birth is 15/08/1995.",
+    "expected": [{ "type": "DOB", "value": "15/08/1995" }]
+  },
+  {
+    "text": "Applicant born on 1988-12-04 in New Delhi.",
+    "expected": [{ "type": "DOB", "value": "1988-12-04" }]
+  },
+  {
+    "text": "Hello, my name is Rahul Sharma.",
+    "expected": [{ "type": "NAME", "value": "Rahul Sharma" }]
+  },
+  {
+    "text": "Please schedule an appointment with Dr. Vikram Patel.",
+    "expected": [{ "type": "NAME", "value": "Dr. Vikram Patel" }]
+  },
+  {
+    "text": "This message is from Michael Johnson.",
+    "expected": [{ "type": "NAME", "value": "Michael Johnson" }]
+  },
+  {
+    "text": "I am happy to inform you that everything is ready.",
+    "expected": [],
+    "mustNotMatch": ["NAME"]
+  }
+]

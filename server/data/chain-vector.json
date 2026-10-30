@@ -1,0 +1,95 @@
+[
+  {
+    "user_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+    "seq": 1,
+    "ts": "2026-01-01T10:00:00.000Z",
+    "stage": "input",
+    "action": "ALLOWED",
+    "risk_score": 10,
+    "categories": {},
+    "matched_rules": [],
+    "explanation": "Allowed: your message looked safe. Risk 10/100. Nothing needed hiding.",
+    "overridden": false,
+    "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entry_hash": "e3d442564c1993e1a10d47d0afd5b99fa57b7b93c601f2992dc5622c6aade960"
+  },
+  {
+    "user_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+    "seq": 2,
+    "ts": "2026-01-01T10:01:00.000Z",
+    "stage": "input",
+    "action": "REDACTED",
+    "risk_score": 15,
+    "categories": {
+      "EMAIL": 1,
+      "PHONE": 1
+    },
+    "matched_rules": [],
+    "explanation": "Protected: 2 private items hidden on your device before sending. Risk 15/100.",
+    "overridden": false,
+    "prev_hash": "e3d442564c1993e1a10d47d0afd5b99fa57b7b93c601f2992dc5622c6aade960",
+    "entry_hash": "bfa26bee96b1d482c59b22f4ef7b9608911fc0242169fd4cd18449c82c9d32ed"
+  },
+  {
+    "user_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+    "seq": 3,
+    "ts": "2026-01-01T10:02:00.000Z",
+    "stage": "input",
+    "action": "WARNED",
+    "risk_score": 45,
+    "categories": {},
+    "matched_rules": [
+      "roleplay-override"
+    ],
+    "explanation": "Warning accepted: this message looked slightly suspicious. Risk 45/100.",
+    "overridden": false,
+    "prev_hash": "bfa26bee96b1d482c59b22f4ef7b9608911fc0242169fd4cd18449c82c9d32ed",
+    "entry_hash": "04fe8f297f7027a93a5e251148dd471e8cfd929cfd2766a382b84702f7775630"
+  },
+  {
+    "user_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+    "seq": 4,
+    "ts": "2026-01-01T10:03:00.000Z",
+    "stage": "input",
+    "action": "BLOCKED",
+    "risk_score": 85,
+    "categories": {},
+    "matched_rules": [
+      "instruction-override"
+    ],
+    "explanation": "Blocked: prompt tried to override instructions. Risk 85/100.",
+    "overridden": false,
+    "prev_hash": "04fe8f297f7027a93a5e251148dd471e8cfd929cfd2766a382b84702f7775630",
+    "entry_hash": "0133be39951873848227b262df231dc3303ddf33c317c6fce3b0b3e493a059e8"
+  },
+  {
+    "user_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+    "seq": 5,
+    "ts": "2026-01-01T10:04:00.000Z",
+    "stage": "output",
+    "action": "OUTPUT_REDACTED",
+    "risk_score": 0,
+    "categories": {
+      "PHONE": 1
+    },
+    "matched_rules": [],
+    "explanation": "Reply cleaned: 1 phone number in the AI's answer was replaced.",
+    "overridden": false,
+    "prev_hash": "0133be39951873848227b262df231dc3303ddf33c317c6fce3b0b3e493a059e8",
+    "entry_hash": "bfb145d831fd203085b804e82501174eae24698bd31c61fb9bcc676b57049f93"
+  },
+  {
+    "user_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+    "seq": 6,
+    "ts": "2026-01-01T10:05:00.000Z",
+    "stage": "system",
+    "action": "AI_UNAVAILABLE",
+    "risk_score": 0,
+    "categories": {},
+    "matched_rules": [],
+    "explanation": "The AI service did not answer. Your message was not lost.",
+    "overridden": false,
+    "prev_hash": "bfb145d831fd203085b804e82501174eae24698bd31c61fb9bcc676b57049f93",
+    "entry_hash": "70ac7cd23b24e4e7810f70d620c8e10e6f32b75f1debb50f657d48f5dd5bc7d8"
+  }
+]
